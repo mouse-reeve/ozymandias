@@ -14,14 +14,7 @@ To use, just run
 ```
 
 ## Options:
-`-i` specify the number of iteration, default `10`
-
-`-f` specify the font used to create the image file, default `Georgia`. This lets you ensure that the font exists on your system, and experiment with how the results change depending on the font used. The difference between `Georgia` and `Webdings` is striking.
-To see a list of available fonts, run:
-
-``` bash
-convert -list font
-```
+`-i`: Specify the number of iteration; the default is `10`.
 
 The script will take a while to run.
 
@@ -50,25 +43,26 @@ Of that colossal wreck, boundless and bare
 The lone and level sands stretch far away.
 ```
 
-The poem after 10 iterations in ComicSans:
+The poem after 5 iterations:
 ```
-Oxymnndms, b, Pm Shelley
-m27 a 7mvx| m from an aquux land
-Who smd: Two v057 and wunklxss legs of smug
+Dummies, by Percy Shgllcy
+1 Mn mm 1 from an arrqu land
 
-Smnd m m dxsxm near M, on me sand,
+wm m1 Two m and mmkless leg; afsfon
+Smnd \n M desen near Menu, on Me Send
+Halfmnk, 1| shattered V‘Sage xles, whose frown
+m wr‘nkled up, m sneer amid command
 
-Half sunk, asmmmd wsagx Ives, whusx frown,
-And wrmklxd hp, and sneer of mld Lammnnd.
+Tell mm M sculpror wel \ Mo; pass] an; read
+wn‘a yer gm '1 a, mmped on mgs‘ Hales; m‘ng;
+Th hand Mm mocked Men and M m Mm fed
 
-Tell M m swlmnr well M passm read
+And 1| m pedeﬁal mgs‘ words appear
+‘My mm ‘5 mymnd‘ﬂs, lung mam
 
-WM y27 survwx, smmpxd on mesa Ixxss M4]:
-The hand Mankxd Maud M2 mm mm f2
+Look 1| my works, ye M‘m, aha dnga‘
+Nom‘ng Des‘d rema‘n; Round m dguy
 
-And on me pxdxsml mesa words appear
-‘My name vs Oxymnndms, kmq of km
-Look on my works, ye uny, and despaw“
-
-m9 bxsvdx rxmmM, Round m2 dxmy
+of mm (o xossal wrezk, boundless and bare
+Th Ion mlml Sandsm'am faraway
 ```
