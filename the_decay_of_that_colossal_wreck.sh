@@ -44,6 +44,7 @@ done
 for i in `seq 1 $max`; do
     echo "--- Iteration $i ---"
     font=$( convert -list font | grep Font: | cut -d' ' -f 4 | grep ^[^W] | awk 'BEGIN{srand();}{print rand()"\t"$0}' | sort -k1 -n | cut -f2- | head -1 )
+    echo "Using font: $font"
     convert -size 500x500 xc:white -font "$font" -pointsize 14 -fill black -annotate +15+15 "@$filename-$i.txt" -trim -bordercolor "#FFF" -border 10 +repage $filename-$i.png
     tesseract $filename-$i.png $filename-`expr $i + 1`
     rm $filename-$i.png
