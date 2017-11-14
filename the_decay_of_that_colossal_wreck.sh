@@ -22,13 +22,16 @@ Nothing beside remains. Round the decay
 Of that colossal wreck, boundless and bare
 The lone and level sands stretch far away." > $filename-1.txt
 
-while getopts ":i:f:" opt; do
+while getopts ":i:f:t:" opt; do
     case $opt in
         i)
             max=$OPTARG
             ;;
         f)
             cat $OPTARG > $filename-1.txt
+            ;;
+        t)
+            echo $OPTARG > $filename-1.txt
             ;;
         \?)
             echo "Invalid option: -$OPTARG" >&2

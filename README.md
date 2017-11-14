@@ -16,12 +16,25 @@ To use, just run
 ## Options:
 `-i`: Specify the number of iteration; the default is `10`.
 
-`-f`: Specify a filename as input; the default is the poem _Ozymandias_ by Percy Shelley
+`-f`: Take a text file as input
 
-The script will take a while to run.
+`-t`: Take a string as input
 
+If no input text is specified, the poem _Ozymandias_ by Percy Shelley is used.
 
-## Example output
+## Example commands:
+```bash
+# Convert the text of Ozymandias 100 times
+./the_decay_of_that_colossal_wreck -i 100
+
+# Use a file as input
+./the_decay_of_that_colossal_wreck -f path/to/filename.txt
+
+# A string as input, iterating 5 times
+./the_decay_of_that_colossal_wreck -t "Mouse Reeve" -i 5
+```
+
+## Example output:
 
 The original poem:
 
