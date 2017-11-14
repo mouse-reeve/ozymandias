@@ -8,8 +8,6 @@ brew install tesseract
 brew install imagemagick
 ```
 
-The script takes an optional "iterations" flag that controls how many times it runs. Default is 10.
-
 To use, just run
 ``` bash
 ./the_decay_of_that_colossal_wreck.sh
