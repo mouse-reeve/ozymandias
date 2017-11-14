@@ -1,24 +1,8 @@
 #!/bin/bash
 
-max=10
-
-while getopts ":i:" opt; do
-    case $opt in
-      i)
-          max=$OPTARG
-          ;;
-      \?)
-        echo "Invalid option: -$OPTARG" >&2
-        exit 1
-        ;;
-      :)
-        echo "Option -$OPTARG requires an argument." >&2
-        exit 1
-        ;;
-    esac
-done
-
 filename=ozymandias
+
+max=10
 # initialize the poem
 echo "Ozymandias, by Percy Shelley
 
@@ -37,6 +21,25 @@ Look on my works, ye Mighty, and despair!'
 Nothing beside remains. Round the decay
 Of that colossal wreck, boundless and bare
 The lone and level sands stretch far away." > $filename-1.txt
+
+while getopts ":i:f:" opt; do
+    case $opt in
+        i)
+            max=$OPTARG
+            ;;
+        f)
+            cat $OPTARG > $filename-1.txt
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit 1
+            ;;
+        :)
+            echo "Option -$OPTARG requires an argument." >&2
+            exit 1
+            ;;
+    esac
+done
 
 for i in `seq 1 $max`; do
     echo "--- Iteration $i ---"

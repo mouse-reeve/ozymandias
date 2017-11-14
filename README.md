@@ -1,4 +1,4 @@
-# ozymandias
+# Ozymandias
 
 Causes text to decay by converting a text file to an image, then OCRing the image back to a text file. Only text files are saved.
 
@@ -15,6 +15,8 @@ To use, just run
 
 ## Options:
 `-i`: Specify the number of iteration; the default is `10`.
+
+`-f`: Specify a filename as input; the default is the poem _Ozymandias_ by Percy Shelley
 
 The script will take a while to run.
 
