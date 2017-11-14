@@ -1,11 +1,16 @@
 #!/bin/bash
 
 max=10
-while getopts ":i:" opt; do
+font="Georgia"
+
+while getopts ":i:f:" opt; do
     case $opt in
       i)
           max=$OPTARG
-        ;;
+          ;;
+      f)
+          font=$OPTARG
+          ;;
       \?)
         echo "Invalid option: -$OPTARG" >&2
         exit 1
@@ -39,7 +44,7 @@ The lone and level sands stretch far away." > $filename-1.txt
 
 for i in `seq 1 $max`; do
     echo "--- Iteration $i ---"
-    convert -size 500x500 xc:white -font "Georgia" -pointsize 14 -fill black -annotate +15+15 "@$filename-$i.txt" -trim -bordercolor "#FFF" -border 10 +repage $filename-$i.png
+    convert -size 500x500 xc:white -font "$font" -pointsize 14 -fill black -annotate +15+15 "@$filename-$i.txt" -trim -bordercolor "#FFF" -border 10 +repage $filename-$i.png
     tesseract $filename-$i.png $filename-`expr $i + 1`
     rm $filename-$i.png
 done
